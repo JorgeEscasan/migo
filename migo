@@ -66,55 +66,55 @@ while True:
         break
 
 
-act=input ("What would you like to do, " + str(name) + "?")
+act=input ("What would you like to do, " + str(name) + "? (Hint: Use 'Music' to create music and 'music' to listen to music.)")
 
 #version only uses native Apple applications
 
 while True:
 
-    if act =="Listen to music":
+    if "music" in act:
         print ("Opening iTunes...")
         subprocess.call(
     ["/usr/bin/open", "-W", "-n", "-a", "/Applications/iTunes.app"]
     )
         act=input ("What would you like to do, " + str(name) + "?")
 
-    if act == "Surf the web":
+    if "web" in act:
         print ("Opening Safari...")
         subprocess.call(
     ["/usr/bin/open", "-W", "-n", "-a", "/Applications/Safari.app"]
     )
         act=input ("What would you like to do, " + str(name) + "?")
 
-    if act == "Edit videos":
+    if "videos" in act:
         print ("Opening iMovie...")
         subprocess.call(
     ["/usr/bin/open", "-W", "-n", "-a", "/Applications/iMovie.app"]
     )
         act=input ("What would you like to do, " + str(name) + "?")
 
-    if act == "Make music":
+    if "Music" in act:
         print ("Opening Garageband...")
         subprocess.call(
     ["/usr/bin/open", "-W", "-n", "-a", "/Applications/Garageband.app"]
     )
         act=input ("What would you like to do, " + str(name) + "?")
 
-    if act == "Change my settings":
+    if "settings" in act:
         print ("Opening System Preferences...")
         subprocess.call(
     ["/usr/bin/open", "-W", "-n", "-a", "/Applications/System Preferences.app"]
     )
         act=input ("What would you like to do, " + str(name) + "?")
 
-    if act == "Send messages":
+    if "messages" in act:
         print ("Opening Messages...")
         subprocess.call(
     ["/usr/bin/open", "-W", "-n", "-a", "/Applications/Messages.app"]
     )
         act=input ("What would you like to do, " + str(name) + "?")
 
-    if act == "Download apps":
+    if "apps" in act:
         print ("Opening App Store...")
         subprocess.call(
     ["/usr/bin/open", "-W", "-n", "-a", "/Applications/App Store.app"]
