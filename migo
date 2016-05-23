@@ -2,9 +2,12 @@
 
 """Hi! My name is Jorge and I'm a 16-year-old high school student from California. The idea for this project was inspired
 by Cameron Howe's interactive UI for the Cardiff Giant on 'Halt and Catch Fire.' If you have any questions, comments
-or tips please contact me at jorgeaescasanr@gmail.com"""
+or suggestions please contact me at jorgeaescasanr@gmail.com"""
 
 import subprocess
+from datetime import datetime
+
+now = datetime.now()
 
 name=input ("What is your name?")
 
@@ -66,7 +69,7 @@ while True:
         break
 
 
-act=input ("What would you like to do, " + str(name) + "? (Hint: Use 'Music' to create music and 'music' to listen to music.)")
+act=input ("What would you like to do, " + str(name) + "?")
 
 #version only uses native Apple applications
 
@@ -79,42 +82,42 @@ while True:
     )
         act=input ("What would you like to do, " + str(name) + "?")
 
-    if "web" in act:
+    if "web" in act.lower():
         print ("Opening Safari...")
         subprocess.call(
     ["/usr/bin/open", "-W", "-n", "-a", "/Applications/Safari.app"]
     )
         act=input ("What would you like to do, " + str(name) + "?")
 
-    if "videos" in act:
+    if "videos" in act.lower():
         print ("Opening iMovie...")
         subprocess.call(
     ["/usr/bin/open", "-W", "-n", "-a", "/Applications/iMovie.app"]
     )
         act=input ("What would you like to do, " + str(name) + "?")
 
-    if "Music" in act:
+    if "music" in act:
         print ("Opening Garageband...")
         subprocess.call(
     ["/usr/bin/open", "-W", "-n", "-a", "/Applications/Garageband.app"]
     )
         act=input ("What would you like to do, " + str(name) + "?")
 
-    if "settings" in act:
+    if "settings" in act.lower():
         print ("Opening System Preferences...")
         subprocess.call(
     ["/usr/bin/open", "-W", "-n", "-a", "/Applications/System Preferences.app"]
     )
         act=input ("What would you like to do, " + str(name) + "?")
 
-    if "messages" in act:
+    if "messages" in act.lower():
         print ("Opening Messages...")
         subprocess.call(
     ["/usr/bin/open", "-W", "-n", "-a", "/Applications/Messages.app"]
     )
         act=input ("What would you like to do, " + str(name) + "?")
 
-    if "apps" in act:
+    if "apps" in act.lower():
         print ("Opening App Store...")
         subprocess.call(
     ["/usr/bin/open", "-W", "-n", "-a", "/Applications/App Store.app"]
@@ -128,9 +131,17 @@ while True:
     )
         act=input ("What would you like to do, " + str(name) + "?")
 
-    if act == "Quit":
+    if "quit" in act.lower():
             print ("Okay, goodbye, " + str(name) + ", it was nice meeting you.")
             break
+
+    if "day" in act.lower() or "today" in act.lower() or "date" in act.lower():
+            print ("It is currently:" + "%s/%s/%s" % (now.month, now.day, now.year))
+            act=input ("What would you like to do, " + str(name) + "?")
+
+    if "time" in act.lower():
+            print ("It is currently:" + "%s:%s" % (now.hour, now.minute))
+            act=input ("What would you like to do, " + str(name) + "?")
 
     else:
         print ("I don't quite understand that, try something else.")
