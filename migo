@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
-"""Hi! My name is Jorge and I'm a 16-year-old high school student from California. The idea for this project was inspired
-by Cameron Howe's interactive UI for the Cardiff Giant on 'Halt and Catch Fire.' If you have any questions, comments
+"""Hi! My name is Jorge and I'm a 16-year-old high school student from California. I did this project in order to practice my python skills. If you have any questions, comments
 or suggestions please contact me at jorgeaescasanr@gmail.com"""
 
 import subprocess
