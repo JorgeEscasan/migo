@@ -1,0 +1,147 @@
+#!/usr/bin/env python3
+
+"""Hi! My name is Jorge and I'm a 16-year-old high school student from California. I did this project in order to practice my python skills. If you have any questions, comments
+or suggestions please contact me at jorgeaescasanr@gmail.com"""
+
+import subprocess
+from datetime import datetime
+
+now = datetime.now()
+
+name=input ("What is your name?")
+
+print ("Hello " + str(name) + "! :-) My name is Migo.")
+
+print ("I am a command line for dummies!")
+
+print ("Dummies are people like you, people who don't know the command line.")
+
+print ("I don't do much right now, because the guy who created me is a high school student who is still learning Python.")
+
+
+
+ans=input ("Say, " + str(name) +". Would you like to know how I work?")
+
+while True:
+    if ans == "Yes":
+
+        print ("Essentially, I am a simplified version of the command line (Terminal on OSX/Linux, Command Prompt on Windows).")
+
+        print ("The command line is the screen you see on hackers' computers in movies, you know, that classic green text on a black screen.")
+
+        print ("Essentially, the command line is the most direct way to tell a computer what to do.")
+
+        print ("Using a command line takes a certain amount of knowledge and skill.")
+
+        print ("But I'm totally different! I respond to much simpler commands.")
+
+        print ("Simply tell me what you want to do, and I will do it!")
+
+        print ("Well, " + str(name) + ", it was a pleasure meeting you! I'll see you soon for the full version of myself!")
+        break
+
+    if ans == "yes":
+
+        print ("Essentially, I am a simplified version of a command line (Terminal on OSX/Linux, Command Prompt on Windows).")
+
+        print ("The command line is the screen you see on hackers' computers in movies, you know, that classic green text on a black screen.")
+
+        print ("Essentially, the command line is the most direct way to tell a computer what to do.")
+
+        print ("Using a command line takes a certain amount of knowledge and skill.")
+
+        print ("But I'm totally different! I respond to much simpler commands.")
+
+        print ("Simply tell me what you want to do, and I will do it!")
+
+        print ("Well, " + str(name) + ", it was a pleasure meeting you! I'll see you soon for the full version of myself!")
+        break
+
+    if ans == "No":
+
+        #print ("Okay, goodbye, " + str(name) + ", it was nice meeting you.")
+        break
+
+    else:
+
+        #print ("Okay, goodbye, " + str(name) + ", it was nice meeting you.")
+        break
+
+
+act=input ("What would you like to do, " + str(name) + "?")
+
+#version only uses native Apple applications
+
+while True:
+
+    if "music" in act:
+        print ("Opening iTunes...")
+        subprocess.call(
+    ["/usr/bin/open", "-W", "-n", "-a", "/Applications/iTunes.app"]
+    )
+        act=input ("What would you like to do, " + str(name) + "?")
+
+    if "web" in act.lower():
+        print ("Opening Safari...")
+        subprocess.call(
+    ["/usr/bin/open", "-W", "-n", "-a", "/Applications/Safari.app"]
+    )
+        act=input ("What would you like to do, " + str(name) + "?")
+
+    if "videos" in act.lower():
+        print ("Opening iMovie...")
+        subprocess.call(
+    ["/usr/bin/open", "-W", "-n", "-a", "/Applications/iMovie.app"]
+    )
+        act=input ("What would you like to do, " + str(name) + "?")
+
+    if "music" in act:
+        print ("Opening Garageband...")
+        subprocess.call(
+    ["/usr/bin/open", "-W", "-n", "-a", "/Applications/Garageband.app"]
+    )
+        act=input ("What would you like to do, " + str(name) + "?")
+
+    if "settings" in act.lower():
+        print ("Opening System Preferences...")
+        subprocess.call(
+    ["/usr/bin/open", "-W", "-n", "-a", "/Applications/System Preferences.app"]
+    )
+        act=input ("What would you like to do, " + str(name) + "?")
+
+    if "messages" in act.lower():
+        print ("Opening Messages...")
+        subprocess.call(
+    ["/usr/bin/open", "-W", "-n", "-a", "/Applications/Messages.app"]
+    )
+        act=input ("What would you like to do, " + str(name) + "?")
+
+    if "apps" in act.lower():
+        print ("Opening App Store...")
+        subprocess.call(
+    ["/usr/bin/open", "-W", "-n", "-a", "/Applications/App Store.app"]
+    )
+        act=input ("What would you like to do, " + str(name) + "?")
+
+    if act == "I am ready to be a real hacker":
+        print ("I have taught you well, young padawan.")
+        subprocess.call(
+    ["/usr/bin/open", "-W", "-n", "-a", "/Applications/Utilities/Terminal.app"]
+    )
+        act=input ("What would you like to do, " + str(name) + "?")
+
+    if "quit" in act.lower():
+            print ("Okay, goodbye, " + str(name) + ", it was nice meeting you.")
+            break
+
+    if "day" in act.lower() or "today" in act.lower() or "date" in act.lower():
+            print ("It is currently:" + "%s/%s/%s" % (now.month, now.day, now.year))
+            act=input ("What would you like to do, " + str(name) + "?")
+
+    if "time" in act.lower():
+            print ("It is currently:" + "%s:%s" % (now.hour, now.minute))
+            act=input ("What would you like to do, " + str(name) + "?")
+
+    else:
+        print ("I don't quite understand that, try something else.")
+        act=input ("What would you like to do, " + str(name) + "?")
